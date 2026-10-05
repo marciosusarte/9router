@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gestão de Escala Híbrida com IA Aplicada | Case Demonstrativo</title>
+  <meta name="description" content="Case demonstrativo de uma solução digital para gestão de escala híbrida com automação, regras de negócio e Inteligência Artificial aplicada." />
+  <meta property="og:title" content="Gestão de Escala Híbrida com IA Aplicada" />
+  <meta property="og:description" content="Case demonstrativo: da gestão manual a uma aplicação inteligente, automatizada e orientada por regras." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://marcio-ai-case.vercel.app/linkedin/" />
+  <meta property="og:image" content="https://marcio-ai-case.vercel.app/og.png" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="315" />
+  <meta property="og:image:type" content="image/png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gestão de Escala Híbrida com IA Aplicada" />
+  <meta name="twitter:description" content="Case demonstrativo: da gestão manual a uma aplicação inteligente, automatizada e orientada por regras." />
+  <meta name="twitter:image" content="https://marcio-ai-case.vercel.app/og.png" />
+  <link rel="canonical" href="https://marcio-ai-case.vercel.app/linkedin/" />
+  <meta name="theme-color" content="#07192b" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%2307192b%22/><path d=%22M22 68V43h13v25zm21 0V30h14v38zm22 0V20h13v48z%22 fill=%22%2356a5ff%22/></svg>">
+  <style>
+    :root{
+      --navy:#07192b;--navy2:#0c2742;--blue:#2f7df6;--cyan:#17b4d8;--green:#20b46a;
+      --purple:#8257e6;--orange:#f3a821;--red:#eb5757;--ink:#142033;--muted:#637083;
+      --bg:#f4f7fb;--card:#ffffff;--line:#dfe7f0;--shadow:0 22px 60px rgba(8,28,50,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+    a{color:inherit}
+    .wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+    .hero{position:relative;overflow:hidden;background:
+      radial-gradient(circle at 88% 14%,rgba(47,125,246,.30),transparent 31%),
+      radial-gradient(circle at 68% 88%,rgba(23,180,216,.15),transparent 28%),
+      linear-gradient(135deg,#07192b 0%,#0b2a48 100%);color:white;padding:34px 0 78px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:64px}
+    .brand{font-weight:800;letter-spacing:.04em;font-size:14px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .dot{width:8px;height:8px;border-radius:50%;background:#67e8f9;box-shadow:0 0 0 5px rgba(103,232,249,.12)}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.02;margin:18px 0 20px;letter-spacing:-.045em}
+    .lead{max-width:680px;font-size:20px;color:#cbd9e8;margin:0 0 28px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:13px 18px;border-radius:12px;font-weight:800;font-size:14px}
+    .btn.primary{background:white;color:var(--navy)}
+    .btn.ghost{border:1px solid rgba(255,255,255,.22);color:white;background:rgba(255,255,255,.05)}
+    .fine{margin-top:20px;font-size:12px;color:#91a6ba}
+    .product{background:#fff;color:var(--ink);border-radius:24px;padding:18px;box-shadow:0 30px 80px rgba(0,0,0,.28);transform:rotate(1.2deg)}
+    .browser{height:38px;border-radius:12px;background:#edf2f7;display:flex;align-items:center;padding:0 12px;gap:7px;color:#7a8797;font-size:11px}
+    .browser i{display:block;width:8px;height:8px;border-radius:50%}
+    .browser i:nth-child(1){background:#ef6262}.browser i:nth-child(2){background:#efb34e}.browser i:nth-child(3){background:#59bd77}
+    .mock{display:grid;grid-template-columns:124px 1fr;gap:14px;margin-top:14px}
+    .side{border-radius:15px;background:var(--navy);padding:15px;color:#b9c9d8;min-height:340px}
+    .side b{display:block;color:#fff;margin-bottom:16px}
+    .side span{display:block;padding:8px 10px;border-radius:8px;font-size:11px;margin-bottom:5px}
+    .side span.active{background:#153c61;color:#fff;font-weight:700}
+    .main{min-width:0}
+    .main h3{margin:2px 0 2px;font-size:18px}.main small{color:#7b8796}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:14px 0}
+    .kpi{padding:10px;border-radius:10px;background:#eef4ff}.kpi:nth-child(2){background:#ecf9f1}.kpi:nth-child(3){background:#fff6e3}.kpi:nth-child(4){background:#fff0f0}
+    .kpi strong{font-size:17px;display:block;color:var(--blue)}.kpi:nth-child(2) strong{color:var(--green)}.kpi:nth-child(3) strong{color:var(--orange)}.kpi:nth-child(4) strong{color:var(--red)}
+    .kpi em{font-style:normal;font-size:9px;color:#778397}
+    .week{border:1px solid #e6ebf2;border-radius:12px;padding:9px}
+    .days{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;text-align:center;font-size:9px;color:#7a8796;font-weight:800}
+    .cells{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:8px}
+    .cell{height:30px;border-radius:7px;background:#eef4ff;color:#3470cd;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center}
+    .cell.home{background:#edf8f1;color:#3d9766}.cell.office{background:#eef4ff;color:#3470cd}
+    .ai-note{margin-top:10px;padding:11px 12px;border-radius:10px;background:#f3edff;color:#6245ae;font-size:10px;font-weight:700}
+    section{padding:82px 0}
+    .section-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:var(--blue)}
+    h2{font-size:clamp(32px,4vw,48px);line-height:1.08;margin:10px 0 14px;letter-spacing:-.035em}
+    .section-lead{font-size:18px;color:var(--muted);max-width:760px;margin:0 0 36px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(22,39,60,.04)}
+    .icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-weight:900;background:#eaf2ff;color:var(--blue);margin-bottom:18px}
+    .card:nth-child(2) .icon{background:#edf8f1;color:var(--green)} .card:nth-child(3) .icon{background:#f3edff;color:var(--purple)}
+    .card h3{margin:0 0 8px;font-size:20px}.card p{margin:0;color:var(--muted)}
+    .flow{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:center}
+    .step{position:relative;padding:20px 16px;border:1px solid var(--line);border-radius:18px;background:#fff;min-height:148px}
+    .step strong{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--navy);color:#fff;margin-bottom:13px}
+    .step h4{margin:0 0 5px;font-size:15px}.step p{margin:0;font-size:12px;color:var(--muted)}
+    .demo{display:grid;grid-template-columns:.82fr 1.18fr;gap:32px;align-items:stretch}
+    .tabs{display:flex;flex-direction:column;gap:10px}
+    .tab{appearance:none;border:1px solid var(--line);background:#fff;border-radius:15px;padding:18px;text-align:left;cursor:pointer;color:var(--ink)}
+    .tab b{display:block;font-size:16px;margin-bottom:4px}.tab span{font-size:13px;color:var(--muted)}
+    .tab.active{border-color:#9ec2ff;background:#f4f8ff;box-shadow:0 10px 24px rgba(47,125,246,.08)}
+    .demo-panel{background:var(--navy);border-radius:24px;padding:26px;color:white;box-shadow:var(--shadow);min-height:370px;display:flex;flex-direction:column}
+    .demo-panel .eyebrow{color:#7fc6ff;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .demo-panel h3{font-size:29px;margin:8px 0 10px}
+    .demo-panel p{color:#c2d0dd;margin:0 0 20px}
+    .result{margin-top:auto;background:#0e3152;border:1px solid #234c70;border-radius:16px;padding:18px}
+    .result-row{display:flex;justify-content:space-between;gap:18px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px}.result-row:last-child{border-bottom:0}
+    .result-row span{color:#a9bed0}.result-row b{color:#fff;text-align:right}
+    .impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .impact-card{padding:28px;border-radius:20px;background:#fff;border:1px solid var(--line)}
+    .impact-card b{font-size:38px;display:block;color:var(--navy);letter-spacing:-.03em}.impact-card span{color:var(--muted)}
+    .skills{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+    .skill{padding:10px 13px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:13px;font-weight:800}
+    .cta{padding:82px 0 96px}
+    .cta-box{background:linear-gradient(135deg,var(--navy),#0d3152);border-radius:28px;padding:42px;color:white;display:flex;justify-content:space-between;gap:30px;align-items:center}
+    .cta-box h2{margin:0 0 10px}.cta-box p{margin:0;color:#c9d7e4;max-width:680px}
+    footer{padding:24px 0 38px;color:#7b8796;font-size:12px;border-top:1px solid var(--line)}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:900px){
+      .hero-grid,.demo,.impact-grid{grid-template-columns:1fr}.hero-grid{gap:38px}.product{transform:none}
+      .cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.mock{grid-template-columns:100px 1fr}
+      .cta-box{display:block}.cta-box .btn{margin-top:22px}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(100% - 24px,1180px)}.hero{padding-top:22px}.nav{margin-bottom:40px}
+      h1{font-size:42px}.lead{font-size:17px}.product{padding:11px}.mock{grid-template-columns:1fr}.side{display:none}
+      .kpis{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.cta-box{padding:28px}
+      section{padding:62px 0}.hero-actions .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">CASE • IA APLICADA</div>
+        <div class="badge"><span class="dot"></span> Demonstrativo</div>
+      </div>
+      <div class="hero-grid">
+        <div>
+          <div class="badge">Negócios + Tecnologia + Inteligência Artificial</div>
+          <h1>Gestão de Escala Híbrida com IA Aplicada</h1>
+          <p class="lead">Da gestão manual a uma aplicação digital inteligente, orientada por regras de negócio, automações, validações e experiência do usuário.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#solucao">Ver a solução</a>
+            <a class="btn ghost" href="#demonstracao">Explorar demonstração</a>
+          </div>
+          <p class="fine">Case conceitual e ilustrativo. Nenhum dado, identidade, regra interna ou informação confidencial é apresentado.</p>
+        </div>
+        <div class="product" aria-label="Mockup ilustrativo da plataforma">
+          <div class="browser"><i></i><i></i><i></i><span style="margin-left:8px">Painel demonstrativo — dados ilustrativos</span></div>
+          <div class="mock">
+            <aside class="side"><b>Painel</b><span class="active">Visão geral</span><span>Calendário</span><span>Trocas</span><span>Alertas</span><span>Relatórios</span></aside>
+            <div class="main">
+              <h3>Visão geral</h3><small>Resumo operacional da semana</small>
+              <div class="kpis"><div class="kpi"><strong>52%</strong><em>Presencial</em></div><div class="kpi"><strong>OK</strong><em>Cobertura</em></div><div class="kpi"><strong>3</strong><em>Solicitações</em></div><div class="kpi"><strong>2</strong><em>Alertas</em></div></div>
+              <div class="week">
+                <div class="days"><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span></div>
+                <div class="cells">
+                  <div class="cell office">Presencial</div><div class="cell home">Home</div><div class="cell office">Presencial</div><div class="cell office">Presencial</div><div class="cell home">Home</div>
+                  <div class="cell home">Home</div><div class="cell office">Presencial</div><div class="cell home">Home</div><div class="cell office">Presencial</div><div class="cell office">Presencial</div>
+                  <div class="cell office">Presencial</div><div class="cell home">Home</div><div class="cell office">Presencial</div><div class="cell office">Presencial</div><div class="cell home">Home</div>
+                </div>
+              </div>
+              <div class="ai-note">IA aplicada apoia geração e validação de cenários com regras e restrições de negócio.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">O desafio</div>
+      <h2>Quando a operação cresce, a planilha deixa de ser suficiente.</h2>
+      <p class="section-lead">O ponto de partida foi um cenário comum em operações híbridas: muitas regras, decisões manuais, pouca visibilidade e esforço elevado para manter equilíbrio e governança.</p>
+      <div class="cards">
+        <article class="card"><div class="icon">01</div><h3>Complexidade operacional</h3><p>Regras, restrições e exceções tornam a montagem e a manutenção da escala difíceis de controlar manualmente.</p></article>
+        <article class="card"><div class="icon">02</div><h3>Baixa visibilidade</h3><p>Informações dispersas dificultam entender ocupação, cobertura, solicitações e possíveis conflitos.</p></article>
+        <article class="card"><div class="icon">03</div><h3>Retrabalho</h3><p>Ajustes, trocas e validações exigem conferências repetitivas e aumentam o risco de inconsistências.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="solucao" class="flow">
+    <div class="wrap">
+      <div class="section-kicker">A solução</div>
+      <h2>Um fluxo digital simples para uma regra de negócio complexa.</h2>
+      <p class="section-lead">A solução organiza o processo de ponta a ponta e usa automação e IA como apoio à decisão — sem retirar o controle das pessoas.</p>
+      <div class="steps">
+        <div class="step"><strong>1</strong><h4>Regras</h4><p>Políticas e restrições são estruturadas de forma consistente.</p></div>
+        <div class="step"><strong>2</strong><h4>Geração</h4><p>Cenários são montados com apoio de automação e IA aplicada.</p></div>
+        <div class="step"><strong>3</strong><h4>Validação</h4><p>Conflitos e exceções são identificados antes da publicação.</p></div>
+        <div class="step"><strong>4</strong><h4>Workflow</h4><p>Solicitações e aprovações seguem um fluxo rastreável.</p></div>
+        <div class="step"><strong>5</strong><h4>Visibilidade</h4><p>Indicadores ajudam a acompanhar equilíbrio e operação.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demonstracao">
+    <div class="wrap">
+      <div class="section-kicker">Demonstração</div>
+      <h2>IA como camada de apoio, não como “caixa-preta”.</h2>
+      <p class="section-lead">Clique nos cenários para visualizar como a aplicação pode apoiar decisões de forma transparente e orientada por regras.</p>
+      <div class="demo">
+        <div class="tabs">
+          <button class="tab active" data-mode="geracao"><b>Geração inteligente</b><span>Cria uma proposta inicial respeitando regras e restrições.</span></button>
+          <button class="tab" data-mode="validacao"><b>Validação automática</b><span>Aponta conflitos antes que a escala seja publicada.</span></button>
+          <button class="tab" data-mode="aprovacao"><b>Fluxo de aprovação</b><span>Organiza solicitações, aceite e decisão do responsável.</span></button>
+        </div>
+        <div class="demo-panel">
+          <div class="eyebrow" id="eyebrow">Cenário • Geração</div>
+          <h3 id="demoTitle">Proposta criada com regras aplicadas</h3>
+          <p id="demoText">A IA sugere uma distribuição inicial e o motor de regras valida cobertura, capacidade e restrições antes de apresentar o cenário.</p>
+          <div class="result" id="resultBox">
+            <div class="result-row"><span>Regras verificadas</span><b>12 / 12</b></div>
+            <div class="result-row"><span>Cobertura mínima</span><b>Atendida</b></div>
+            <div class="result-row"><span>Conflitos críticos</span><b>0</b></div>
+            <div class="result-row"><span>Status</span><b>Pronto para revisão humana</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-kicker">Resultado esperado</div>
+      <h2>Tecnologia aplicada para aumentar clareza, controle e eficiência.</h2>
+      <p class="section-lead">Os indicadores abaixo são qualitativos e representam os objetivos da solução — não métricas reais de uma empresa.</p>
+      <div class="impact-grid">
+        <div class="impact-card"><b>Mais governança</b><span>Regras explícitas, validações automáticas e histórico do processo.</span></div>
+        <div class="impact-card"><b>Menos esforço manual</b><span>Automação das tarefas repetitivas e redução de conferências operacionais.</span></div>
+        <div class="impact-card"><b>Melhor experiência</b><span>Fluxos simples para consulta, solicitação, aprovação e acompanhamento.</span></div>
+        <div class="impact-card"><b>Base escalável</b><span>Arquitetura preparada para evoluir com novas regras, integrações e recursos de IA.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-kicker">Competências aplicadas</div>
+      <h2>Da identificação do problema à solução em produção.</h2>
+      <p class="section-lead">O trabalho combina entendimento de negócio, construção de produto e aplicação prática de tecnologia.</p>
+      <div class="skills">
+        <span class="skill">Applied AI</span><span class="skill">AI Agents</span><span class="skill">Automation</span><span class="skill">Product Development</span><span class="skill">UX/UI</span><span class="skill">APIs & Integrations</span><span class="skill">Cloud</span><span class="skill">Security</span><span class="skill">Process Optimization</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta-box">
+        <div><div class="section-kicker" style="color:#79c9ff">Case demonstrativo</div><h2>Negócios + Tecnologia + IA Aplicada</h2><p>Este material foi criado para demonstrar abordagem, competências e capacidade de transformar um problema operacional em uma solução digital — preservando integralmente dados e informações confidenciais.</p></div>
+        <a class="btn primary" href="https://www.linkedin.com/in/m%C3%A1rcio-junior-53071b1bb" target="_blank" rel="noopener">Ver perfil no LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="wrap footer-row"><span>Case demonstrativo • Gestão de Escala Híbrida com IA Aplicada</span><span>Sem dados, marcas ou informações confidenciais.</span></div></footer>
+
+  <script>
+    const data={
+      geracao:{eyebrow:"Cenário • Geração",title:"Proposta criada com regras aplicadas",text:"A IA sugere uma distribuição inicial e o motor de regras valida cobertura, capacidade e restrições antes de apresentar o cenário.",rows:[["Regras verificadas","12 / 12"],["Cobertura mínima","Atendida"],["Conflitos críticos","0"],["Status","Pronto para revisão humana"]]},
+      validacao:{eyebrow:"Cenário • Validação",title:"Conflitos identificados antes da publicação",text:"A aplicação compara o cenário com as regras definidas e destaca pontos que precisam de correção ou decisão humana.",rows:[["Validações executadas","12"],["Atenções encontradas","2"],["Bloqueios críticos","0"],["Próxima ação","Revisar exceções"]]},
+      aprovacao:{eyebrow:"Cenário • Workflow",title:"Solicitação acompanhada de ponta a ponta",text:"O fluxo registra solicitação, aceite e aprovação, mantendo clareza de status e reduzindo dúvidas sobre o que já foi concluído.",rows:[["Solicitação","Registrada"],["Aceite","Confirmado"],["Aprovação","Concluída"],["Status","Atualizado em tempo real"]]}
+    };
+    document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>{
+      document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));btn.classList.add("active");
+      const x=data[btn.dataset.mode];document.getElementById("eyebrow").textContent=x.eyebrow;document.getElementById("demoTitle").textContent=x.title;document.getElementById("demoText").textContent=x.text;
+      document.getElementById("resultBox").innerHTML=x.rows.map(r=>'<div class="result-row"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>').join("");
+    }));
+  </script>
+</body>
+</html>
